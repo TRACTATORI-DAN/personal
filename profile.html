@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spandan Pal is a product marketer focused on AI-led growth, positioning, demand, and content systems for B2B SaaS.">
+  <meta name="theme-color" content="#f4f3ef">
+  <title>Spandan Pal — Product Marketing &amp; AI-led Growth</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23131313'/%3E%3Cpath d='M19 44V20h15c7 0 11 4 11 10s-4 10-11 10h-7v4h-8Zm8-12h7c2 0 3-1 3-2s-1-2-3-2h-7v4Z' fill='%23c7ff4a'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #151515;
+      --paper: #f4f3ef;
+      --surface: #fff;
+      --line: #cbc9c2;
+      --muted: #66645f;
+      --accent: #2756ff;
+      --acid: #c7ff4a;
+      --radius: 1.15rem;
+      --shadow: 0 18px 48px rgba(21,21,21,.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; text-decoration-thickness: .08em; text-underline-offset: .2em; }
+    a:hover { text-decoration-color: var(--accent); }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: .25rem; }
+    .skip { position: fixed; left: 1rem; top: -5rem; z-index: 20; background: var(--ink); color: white; padding: .8rem 1rem; }
+    .skip:focus { top: 1rem; }
+    .shell { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
+    .nav {
+      min-height: 5.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .monogram { display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--ink); color: var(--acid); font-weight: 850; text-decoration: none; }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; font-size: .9rem; font-weight: 700; }
+    .nav-links a { text-decoration: none; }
+    .nav-links .contact { background: var(--ink); color: white; padding: .72rem 1rem; border-radius: 999px; }
+    .hero { padding: clamp(4.5rem, 10vw, 9rem) 0 clamp(4rem, 8vw, 7rem); }
+    .eyebrow { display: flex; align-items: center; gap: .65rem; margin: 0 0 1.2rem; font-size: .8rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: .65rem; height: .65rem; border-radius: 50%; background: var(--accent); }
+    h1 { max-width: 980px; margin: 0; font-size: clamp(3.4rem, 9vw, 7.9rem); line-height: .89; letter-spacing: -.075em; font-weight: 850; }
+    h1 span { color: var(--accent); }
+    .hero-bottom { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr); gap: 3rem; align-items: end; margin-top: 3.2rem; }
+    .intro { max-width: 720px; margin: 0; font-size: clamp(1.18rem, 2.2vw, 1.65rem); line-height: 1.35; letter-spacing: -.02em; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: flex-end; }
+    .button { min-height: 3rem; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .72rem 1rem; border: 1px solid var(--ink); border-radius: 999px; font-weight: 760; text-decoration: none; transition: transform .2s ease, background .2s ease, color .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: var(--ink); color: white; }
+    .button.primary:hover { background: var(--accent); border-color: var(--accent); }
+    section { padding: clamp(4rem, 8vw, 7rem) 0; border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2.75rem; }
+    .kicker { margin: .4rem 0 0; color: var(--muted); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: 0; max-width: 760px; font-size: clamp(2.2rem, 5vw, 4.7rem); line-height: .98; letter-spacing: -.055em; }
+    .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+    .work-card { grid-column: span 6; min-height: 22rem; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(1.4rem, 3vw, 2.2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .work-card:first-child { grid-column: span 7; background: var(--ink); color: white; }
+    .work-card:nth-child(2) { grid-column: span 5; background: var(--acid); }
+    .role-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .role-meta span { font-size: .78rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+    .index { opacity: .55; }
+    h3 { margin: 1rem 0 .4rem; font-size: clamp(1.7rem, 3vw, 2.7rem); line-height: 1; letter-spacing: -.04em; }
+    .company { margin: 0; font-weight: 760; }
+    .work-card p:last-child { margin: 1.6rem 0 0; max-width: 48ch; }
+    .capability-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .capability-lead { min-height: 28rem; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(1.5rem, 4vw, 3rem); border-radius: var(--radius); color: white; background: var(--accent); }
+    .capability-lead p { max-width: 26ch; font-size: clamp(1.5rem, 3vw, 2.4rem); line-height: 1.15; letter-spacing: -.035em; margin: 0; }
+    .capability-list { display: grid; gap: .75rem; }
+    .capability { display: grid; grid-template-columns: 3rem 1fr; align-items: center; min-height: 5.4rem; padding: 1rem 1.2rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); font-weight: 760; }
+    .capability b { color: var(--accent); font-variant-numeric: tabular-nums; }
+    .timeline { margin-left: calc(33.333% + .5rem); }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { min-height: 5.5rem; display: grid; grid-template-columns: minmax(150px, .85fr) minmax(0, 1.45fr) 2rem; gap: 1rem; align-items: center; cursor: pointer; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; font-size: 1.5rem; justify-self: end; }
+    details[open] summary::after { content: "−"; }
+    .when { color: var(--muted); font-size: .88rem; }
+    .where { font-weight: 800; }
+    .detail-copy { max-width: 680px; margin: 0 0 1.75rem calc(38% + .4rem); color: var(--muted); }
+    .credentials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .credential { padding: 1.5rem; border-top: 3px solid var(--ink); background: rgba(255,255,255,.45); }
+    .credential h3 { margin: 0 0 .65rem; font-size: 1.15rem; line-height: 1.2; letter-spacing: -.02em; }
+    .credential p { margin: 0; color: var(--muted); }
+    .credential.cert { border-top-color: var(--accent); }
+    footer { padding: clamp(4rem, 9vw, 8rem) 0 2rem; background: var(--ink); color: white; }
+    .footer-title { max-width: 900px; margin: 0 0 3rem; font-size: clamp(2.8rem, 7vw, 6.8rem); line-height: .92; letter-spacing: -.065em; }
+    .footer-title span { color: var(--acid); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .footer-links a { min-height: 3rem; display: inline-flex; align-items: center; padding: .65rem 1rem; border: 1px solid #555; border-radius: 999px; text-decoration: none; }
+    .footer-links a:hover { border-color: var(--acid); color: var(--acid); }
+    .fineprint { display: flex; justify-content: space-between; gap: 1rem; margin-top: 7rem; padding-top: 1.4rem; border-top: 1px solid #3b3b3b; color: #aaa; font-size: .85rem; }
+    @media (max-width: 800px) {
+      .nav-links a:not(.contact) { display: none; }
+      .hero-bottom, .section-head, .capability-layout { grid-template-columns: 1fr; }
+      .hero-actions { justify-content: flex-start; }
+      .work-card, .work-card:first-child, .work-card:nth-child(2) { grid-column: 1 / -1; min-height: 19rem; }
+      .timeline { margin-left: 0; }
+      summary { grid-template-columns: 1fr 1.4fr 1.5rem; }
+      .detail-copy { margin-left: 0; }
+      .credentials { grid-template-columns: 1fr; }
+      .fineprint { flex-direction: column; margin-top: 4rem; }
+    }
+    @media (max-width: 520px) {
+      .shell { width: min(100% - 1.25rem, 1180px); }
+      .nav { min-height: 4.75rem; }
+      h1 { font-size: clamp(3.2rem, 17vw, 5rem); }
+      .hero { padding-top: 4rem; }
+      .button { width: 100%; }
+      summary { grid-template-columns: 1fr 1.3rem; padding: 1rem 0; }
+      summary .when { grid-column: 1; grid-row: 2; }
+      summary::after { grid-column: 2; grid-row: 1 / span 2; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="monogram" href="#top" aria-label="Spandan Pal, home">SP</a>
+      <div class="nav-links">
+        <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#career">Career</a>
+        <a class="contact" href="mailto:i.me.ronny@gmail.com">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top">
+      <p class="eyebrow">Product marketing · AI-led growth</p>
+      <h1>Spandan Pal turns complex products into <span>clear growth.</span></h1>
+      <div class="hero-bottom">
+        <p class="intro">A B2B SaaS marketer working across positioning, launches, demand, content, SEO, paid acquisition, and account-based marketing. Currently part of the founding team at Interact AI.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:i.me.ronny@gmail.com">Start a conversation ↗</a>
+          <a class="button" href="https://www.linkedin.com/in/spandanpal" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="shell">
+        <div class="section-head"><p class="kicker">Selected work</p><h2>From market story to demand engine.</h2></div>
+        <div class="work-grid">
+          <article class="work-card"><div><div class="role-meta"><span>Founding team · Marketing</span><span class="index">01</span></div><h3>Interact AI</h3><p class="company">April 2025 — Present</p></div><p>Leading the marketing function for an AI company from its founding stage, spanning product narrative, go-to-market work, and growth execution.</p></article>
+          <article class="work-card"><div><div class="role-meta"><span>PMM consultant</span><span class="index">02</span></div><h3>Xoxoday</h3><p class="company">March — May 2025</p></div><p>Supported the Loyalife rebrand and reshaped landing pages, ads, sales decks, whitepapers, and one-pagers. Planned and ran email and social campaigns.</p></article>
+          <article class="work-card"><div><div class="role-meta"><span>Associate PMM</span><span class="index">03</span></div><h3>Squadcast</h3><p class="company">January — December 2024</p></div><p>Worked at the point where product context becomes a clear message, useful sales material, and focused market execution.</p></article>
+          <article class="work-card"><div><div class="role-meta"><span>Content &amp; product marketing</span><span class="index">04</span></div><h3>Writesonic</h3><p class="company">September 2023 — January 2024</p></div><p>Applied content and product marketing to an AI software product during a period of rapid category change.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="shell">
+        <div class="section-head"><p class="kicker">Capabilities</p><h2>Strategy with direct execution.</h2></div>
+        <div class="capability-layout">
+          <div class="capability-lead"><span class="kicker" style="color:white">Operating range</span><p>Position the product. Build the message. Create demand. Measure what moves.</p></div>
+          <div class="capability-list" aria-label="Core capabilities">
+            <div class="capability"><b>01</b><span>Positioning &amp; product marketing</span></div>
+            <div class="capability"><b>02</b><span>B2B SaaS content strategy</span></div>
+            <div class="capability"><b>03</b><span>SEO, research &amp; conversion</span></div>
+            <div class="capability"><b>04</b><span>LinkedIn &amp; PPC campaigns</span></div>
+            <div class="capability"><b>05</b><span>Email, lifecycle &amp; ABM</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="career">
+      <div class="shell">
+        <div class="section-head"><p class="kicker">Career archive</p><h2>A hands-on path through SaaS growth.</h2></div>
+        <div class="timeline">
+          <details><summary><span class="where">TripleDart</span><span class="when">Content Strategist · Dec 2024 — Jan 2025</span></summary><p class="detail-copy">Content strategy for an extended B2B SaaS growth team.</p></details>
+          <details><summary><span class="where">Pepper Content</span><span class="when">Freelance Content Writer · 2023 — 2024</span></summary><p class="detail-copy">Worked with clients including KekaHR, Upstox, Axis Bank, LendingStream, IndusInd Bank, and Astra Security.</p></details>
+          <details><summary><span class="where">Luru</span><span class="when">SEO Copywriter · Jun 2023 — Feb 2024</span></summary><p class="detail-copy">Built research-led outlines and produced SEO articles, product pages, and landing pages.</p></details>
+          <details><summary><span class="where">Pixelo Digital</span><span class="when">Content Marketing Manager · Feb — Aug 2023</span></summary><p class="detail-copy">Led content strategy, campaigns, creative resources, stakeholder updates, channel execution, and ROI tracking.</p></details>
+          <details><summary><span class="where">Factors.AI</span><span class="when">SEO &amp; Content Marketing · Feb 2022 — Jan 2023</span></summary><p class="detail-copy">Worked across content, CRO, SEO, paid campaigns, email, ABM, competitive research, and conversion copy.</p></details>
+          <details><summary><span class="where">LeadSquared</span><span class="when">Digital Marketing Intern · Oct 2021 — Feb 2022</span></summary><p class="detail-copy">Supported social, ads, email, conversion work, SEO, content, and campaign management.</p></details>
+          <details><summary><span class="where">Earlier work</span><span class="when">2020 — 2022</span></summary><p class="detail-copy">Roles and training with ClientVenue, Cliently, GeeksforGeeks, foreignadmits, PixelTrack, KROPPERZ, Growthdish, TCS, EPAM Systems, CodeChef, and AIDSM.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="shell">
+        <div class="section-head"><p class="kicker">Background</p><h2>Business, technology, and communication.</h2></div>
+        <div class="credentials">
+          <article class="credential"><h3>Stoa</h3><p>General Management Program</p></article>
+          <article class="credential"><h3>IMT Ghaziabad</h3><p>Professional Certificate, Digital Marketing</p></article>
+          <article class="credential"><h3>Sister Nivedita University</h3><p>BTech, Computer Science &amp; Business Systems</p></article>
+          <article class="credential cert"><h3>Microsoft</h3><p>MTA: Security Fundamentals, 2020</p></article>
+          <article class="credential cert"><h3>Applied learning</h3><p>Machine learning, Python, functional programming, data analytics, and SEO</p></article>
+          <article class="credential cert"><h3>Languages</h3><p>English, Bengali, and Hindi</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <p class="footer-title">Build the message people <span>remember.</span></p>
+      <div class="footer-links">
+        <a href="mailto:i.me.ronny@gmail.com">i.me.ronny@gmail.com</a>
+        <a href="tel:+919641732101">+91 96417 32101</a>
+        <a href="https://www.linkedin.com/in/spandanpal" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://shorturl.at/brHX6" target="_blank" rel="noopener noreferrer">Portfolio ↗</a>
+      </div>
+      <div class="fineprint"><span>Spandan Pal · India</span><span>Product Marketing · AI-led Growth</span></div>
+    </div>
+  </footer>
+</body>
+</html>
